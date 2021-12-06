@@ -8,6 +8,10 @@ html {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+body{
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+
 /* thuộc tính flex đặt độ dài linh hoạt trên các hàng linh hoạt. */
 .flex-container {
     display: flex;
@@ -16,17 +20,18 @@ html {
 }
 
 #logo {
-    margin: 15px;
+    margin: 10px;
+    margin-left: 20px;
     width: 60px;
     height: 60x;
 }
 
 #label-login{
     font-size: 25px;
-    margin: 15px 15px 15px 20px;
-    font-family: Roboto,Helvetica,Arial,sans-serif;
+    margin: 15px 15px 10px 20px;
     color: white;
     font-weight: 800;
+    text-transform: uppercase;
 }
 
 .login-body-container h3{
@@ -35,6 +40,10 @@ html {
     font-size: 30px;
     text-align: center;
     margin: 24px;
+    text-transform: uppercase;
+    border: 2px solid;
+    padding: 5px 0 5px 0;
+    border-radius: 5px;
 }
 
 form {
@@ -58,10 +67,6 @@ form {
 .login-form-username, .login-form-password{
     margin: 24px
 }
-/* .login-form input{
-    font-family: Roboto;
-    width: 100%;
-} */
 
 .login-form-username input, .login-form-password input{
     font-family: Roboto;
@@ -97,7 +102,6 @@ form {
     transition: .3s all ease;
 }
 
-
 .login-forgot-password {
     text-align: left!important;
     width: 100%!important;
@@ -105,12 +109,13 @@ form {
     margin-bottom: 12px;
 }
 
-
 .login-wrap{
     position: relative;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 10px 34px -15px rgb(0 0 0 / 24%);
+    /* box-shadow: 0 10px 34px -15px rgb(0 0 0 / 24%); */
+    box-shadow: 0 10px 60px -15px rgb(0 0 0 / 24%);
+    margin: 5px 0 5px 0;
 }
 
 .p-md-5 {
@@ -136,13 +141,9 @@ form {
 }
 
 .button-login button{
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 550;
 }
-
-/* .justify-content-center{
-    text-align: center;
-} */
 
 .img-login{
     text-align: center;
