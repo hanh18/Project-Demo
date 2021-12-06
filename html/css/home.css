@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(26, 148, 255);
+}
+
+#logo {
+    /* margin: 10px;
+    margin-left: 20px; */
+    width: 60px;
+    height: 60x;
+    border-radius: 10px;
+}
+
+#icon-search {
+    /* margin: 10px;
+    margin-left: 20px; */
+    width: 30px;
+    height: 30x;
+    border-radius: 10px;
+}
+
+.search-button {
+    background-color: white;
+    border: none;
+    color: #2980b9;
+    font-weight: 700;
+    padding: 8px 25px;
+    text-align: center;
+    font-size: 16px;
+    /* margin: 4px 2px; */
+    /* Chỉnh độ mờ */
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    /* height: 40px; */
+}
+  
+.search-button:hover {opacity: 1}
+
+.form-inline{
+    margin: 0 20px 0 20px;
+}
+
+.form-inline input{
+    width: 500px;
+    height: 40px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.form-inline{
+    border-radius: 5px;
+}
+
+.nav-link{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
