@@ -1,7 +1,10 @@
 * {
     box-sizing: border-box;
 }
-
+/* html{
+    line-height: 1.15;
+    text-size-adjust: 100%;
+} */
 body{
     font-family: Roboto,Helvetica,Arial,sans-serif;
 }
@@ -69,4 +72,224 @@ body{
     color: white;
     font-size: 15px;
     font-weight: 500;
+}
+
+
+/* category */
+.items-category{
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(56, 56, 61);
+    display: inline-block;
+    line-height: 1.5;
+    text-size-adjust: 100%;
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+}
+
+.hcRNiQ .content .slider {
+    display: inline-block;
+    transition: all 0.5s ease-in-out 0s;
+    white-space: nowrap;
+}
+
+.hcRNiQ .content .slider a {
+    /* padding: 0px 16px; */
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 10px 20px 10px 20px;
+}
+/* 
+#icon-arrow-back{
+    background-position: -392px -189px;
+    width: 8px;
+    height: 14px;
+}
+
+.tikicon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+i {
+    font-style: italic;
+}
+
+.hcRNiQ .icon {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+
+.category .container{
+    width: 1240px;
+    padding: 15px 0px;
+    margin: 0px auto;
+    position: relative;
+    height: 44px;
+}
+
+.category {
+    background-color: rgb(255, 255, 255);
+    height: 44px;
+} */
+
+.container {
+    margin: 10px 0 10px 10px;
+    line-height: 20px;
+}
+
+main {
+    display: block;
+}
+
+.Container-sc-itwfbd-0 {
+    background: #efefef;
+}
+
+.kFdEkv {
+    display: flex;
+    padding: 10px 16px;
+    background-color: white;
+    flex: 1 1 0%;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+
+.hfMLFx {
+    width: 1270px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 2px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cMnFhK {
+    background: rgb(244, 244, 244);
+    margin-top: 16px;
+    border-radius: 4px;
+}
+
+/* Category gợi ý hôm nay */
+.bSYAiy .tab img {
+    transition: all 0.4s ease 0s;
+    border-radius: 4px;
+}
+
+.fWjUGo {
+    object-fit: contain;
+}
+
+img {
+    max-width: 100%;
+    border-style: none;
+}
+
+.bSYAiy .tab {
+    border: 1px solid white;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    min-height: 78px;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+.bSYAiy .tab.active {
+    border: 1px solid rgb(13, 92, 182);
+}
+
+/* chỉnh các items thành từng cột */
+.bSYAiy {
+    display: grid;
+    margin-bottom: 4px;
+    overflow: auto;
+    position: relative;
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 4px;
+}
+
+/* Nội dung của từng items */
+.jreItg {
+    /* display: flex; */
+    padding: 12px;
+    color: rgb(56, 56, 61);
+    text-decoration: none;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.icHRkQ > .content .product-item {
+    text-decoration: none;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.jreItg .badge-service {
+    margin-bottom: 8px;
+    margin-top: 12px;
+}
+
+.jreItg .name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.jreItg .name > span {
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0px 0px 4px;
+    line-height: 20px;
+    word-break: break-word;
+}
+
+/* css giá của items */
+
+
+.jreItg .price-discount__price {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.jreItg .price-discount.has-discount {
+    color: rgb(255, 66, 78);
+}
+
+.jreItg .price-discount {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 4px;
+    color: rgb(56, 56, 61);
+}
+
+.price-discount__discount{
+    padding: 0px 2px;
+    line-height: 14px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 8px;
+    border: 1px solid rgb(255, 66, 78);
+    border-radius: 2px;
+    background-color: rgb(255, 240, 241);
+    color: rgb(255, 66, 78);
 }
