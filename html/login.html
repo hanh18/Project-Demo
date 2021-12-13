@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+
+    <!-- Add bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Add css -->
+    <link rel="stylesheet" href="css\login.css">
+</head>
+<body>
+    <header>
+        <div class="flex-container">
+            <div id="img-logo">
+                <img id="logo" src="https://salt.tikicdn.com/ts/upload/ae/f5/15/2228f38cf84d1b8451bb49e2c4537081.png" alt="">
+            </div>
+            <div id="label-login">Đăng nhập</div>
+        </div>
+    </header>
+
+    <div class="login-body-container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="login-wrap p-4 p-md-5">
+                    <h3>
+                        Đăng nhập
+                    </h3>
+                    <div class="img-login">
+                        <img id="image-person" src="https://hanhtrinhmouoc2018.thanhnien.vn/img/general/none-avatar.png" alt="">
+                    </div>
+                    <form action="#" class="login-form">
+                        <div class="login-form-username">
+                            <input type="text" class="login-username" placeholder="Nhập email..." required>
+                        </div>
+                        <div class="login-form-password">
+                            <input type="password" class="login-password" placeholder="Nhập mật khẩu..." required>
+                        </div>
+                        <div class="login-form-remember-me-and-forgot-password">
+                            <div class="login-remember-me">
+                                    <label id="checkbox-wrap">
+                                        <!-- Thêm thuộc tính checked trong input để khi load form checkbox luôn hiển thị đã được check -->
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Ghi nhớ mật khẩu
+                                    </label>
+                            </div>
+                            <div class="login-remember-me login-forgot-password">
+                                <a href="https://www.google.com/">Quên mật khẩu ?</a>
+                            </div>
+                        </div>
+                        <div class="button-login">
+                            <button type="submit" class="btn btn-primary rounded submit p-3 px-5">Đăng nhập</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
