@@ -34,13 +34,13 @@
                     </div>
                     <form action="#" class="login-form">
                         <div class="login-form-email">
-                            <input type="text" class="login-email" id = "email" placeholder="Nhập email..." required>
-                            <div id = "message-email" style="color:red"></div>
+                            <input type="text" tabindex="1" class="login-email" id = "email" placeholder="Nhập email..." required>
+                            <div id = "message-email"></div>
                         </div>
                         <div class="login-form-password">
-                            <input type="password" class="login-password" id = "password" placeholder="Nhập mật khẩu..." required>
-                            <div id = "message-password" style="color:red"></div>
-                            <div id = "message" style="color:red"></div>
+                            <input type="password" tabindex="2" class="login-password" id = "password" placeholder="Nhập mật khẩu..." required>
+                            <div id = "message-password"></div>
+                            <div id = "message" ></div>
                         </div>
                         <div class="login-form-remember-me-and-forgot-password">
                             <div class="login-remember-me">
@@ -56,7 +56,7 @@
                             </div>
                         </div>
                         <div class="button-login">
-                            <button type="button" onclick="validationLogin()" class="btn btn-primary rounded submit p-3 px-5">Đăng nhập</button>
+                            <button id="login" tabindex="3" type="button" onclick="validationLogin()" class="btn btn-primary rounded submit p-3 px-5">Đăng nhập</button>
                         </div>
                     </form>
                 </div>
