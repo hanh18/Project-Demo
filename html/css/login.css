@@ -156,3 +156,7 @@ form {
 .img-login #image-person{
     height: 120px;
 }
+
+#message-username, #message-password {
+    padding-left: 30px;
+}
