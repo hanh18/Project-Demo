@@ -20,33 +20,6 @@
 // document.getElementById('item').innerHTML = content;
 
 // ===============
-// var itemId = $('#item');
-
-// function render (container, items){
-//     var htmlItems = items.map(function(item){
-//         return convertImg(item.img);
-//     });
-
-//     var html = htmlItems.join('');
-
-//     container.html(html);
-//     console.log(html);
-// }
-
-// render(itemId, productList);
-
-// var mainContainer = document.getElementById("item");
-
-// var div = document.createElement("div");
-
-// div.innerHTML = convertImg(productList[0].img);
-
-// mainContainer.appendChild(div);
-
-// var content = convertImg(productList[0].img);
-
-// document.getElementById('item').innerHTML = content;
-
 
 productList = [
 {
@@ -107,36 +80,6 @@ productList = [
 }
 ]
 
-// function imgProduct(img){
-//     return '<div class="product-img"> <img src="' + img + '" alt=""></div>';
-// }
-
-// function evaluate(){
-//     return '<div style="display: flex; align-items: center; margin: 0 0 4px 0;"><div style="display: flex;"><div style="position: relative;"><div style="display: flex; align-items: center; width: 15px; white-space: nowrap; left: 0px; top: 0px;"><img src="https://assets.dryicons.com/uploads/icon/svg/12715/7b07ac52-2bd3-41d3-bac8-766575d2e180.svg" alt=""><img src="https://assets.dryicons.com/uploads/icon/svg/12715/7b07ac52-2bd3-41d3-bac8-766575d2e180.svg" alt=""><img src="https://assets.dryicons.com/uploads/icon/svg/12715/7b07ac52-2bd3-41d3-bac8-766575d2e180.svg" alt=""><img src="https://assets.dryicons.com/uploads/icon/svg/12715/7b07ac52-2bd3-41d3-bac8-766575d2e180.svg" alt=""><img src="https://assets.dryicons.com/uploads/icon/svg/12713/0ba1c779-e08a-49d5-a61c-a35d478881c3.svg" alt=""></div></div></div></div>'
-// }
-
-// function soleProduct(sold){
-//     return '<div class="product-sold">' + sold + '</div>';
-// }
-
-// function priceProduct(price, discount){
-//     if(discount == ""){
-//         return '<div class="product-price"><div class="price-not-discount">' + price + '</div></div>';
-//     }
-
-//     return '<div class="product-price has-discount"><div class="price-discount__price">' + price + '</div><div class="price-discount__discount">' + discount + '</div></div>';
-// }
-
-// function convertCover(name, sold, price, discount){
-//     return '<div class="cover"><div class="product-name">' + name + '</div>' + evaluate() + soleProduct(sold) + priceProduct(price, discount) + '</div>';
-// }
-
-// function productItems (img, name, sold, price, discount){
-//     return '<div class="product-items" id="item">' + imgProduct(img) + convertCover(name, sold, price, discount) + '</div>'
-// }
-// var content = productItems (productList[0].img, productList[0].productName, productList[0].sold, productList[0].price, productList[0].discount);
-
-// document.getElementById('item').innerHTML = content;
 
 function imgProduct(img){
     return '<div class="product-img"> <img src="' + img + '" alt=""></div>';
