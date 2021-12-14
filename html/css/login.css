@@ -10,6 +10,10 @@ html {
 
 body{
     font-family: Roboto,Helvetica,Arial,sans-serif;
+    /* ẩn thanh cuộn dọc */
+    overflow-y:hidden; 
+    /* ẩn thanh cuộn ngang */
+    overflow-x:hidden;
 }
 
 /* thuộc tính flex đặt độ dài linh hoạt trên các hàng linh hoạt. */

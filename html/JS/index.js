@@ -1,26 +1,3 @@
-// var fs = require('fs');
-
-// //đọc file JSON (đồng bộ)
-// var productListJSON = fs.readFileSync('./data.json', { encoding: 'utf-8' });
-// console.log(productListJSON);
-
-// //convert to object 
-// var productList = JSON.parse(productListJSON);
-// console.log(productList);
-
-// function convertImg(img){
-//     return '<div class="product-img"> <img src="'+ img +'" alt=""></div>';
-// }
-
-
-// console.log(convertImg(productList[0].img));
-
-// var content = convertImg(productList[0].img);
-
-// document.getElementById('item').innerHTML = content;
-
-// ===============
-
 productList = [
 {
     productName: 'Sổ tay ghi chép mục tiêu: My Day My Life',
@@ -80,7 +57,6 @@ productList = [
 }
 ]
 
-
 function imgProduct(img){
     return '<div class="product-img"> <img src="' + img + '" alt=""></div>';
 }
@@ -113,7 +89,7 @@ var arrProduct = productList.map(function(item){
     return productItems(item.img, item.productName, item.sold, item.price, item.discount);
 })
 
-var content = arrProduct.join();
+var content = arrProduct.join('');
 
 document.getElementById('container-product-items').innerHTML = content;
 
