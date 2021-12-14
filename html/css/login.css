@@ -11,7 +11,7 @@ html {
 body{
     font-family: Roboto,Helvetica,Arial,sans-serif;
     /* ẩn thanh cuộn dọc */
-    overflow-y:hidden; 
+    overflow-y:visible; 
     /* ẩn thanh cuộn ngang */
     overflow-x:hidden;
 }
@@ -56,7 +56,7 @@ form {
     line-height: 1.8;
 }
 
-.login-username, .login-password{
+.login-email, .login-password{
     height: 48px;
     background: rgba(0,0,0,.05);
     color: #000;
@@ -68,11 +68,11 @@ form {
     border-radius: 5px;
 }
 
-.login-form-username, .login-form-password{
+.login-form-email, .login-form-password{
     margin: 24px
 }
 
-.login-form-username input, .login-form-password input{
+.login-form-email input, .login-form-password input{
     font-family: Roboto;
     width: 100%;
 }
@@ -155,8 +155,4 @@ form {
 
 .img-login #image-person{
     height: 120px;
-}
-
-#message-username, #message-password {
-    padding-left: 30px;
 }

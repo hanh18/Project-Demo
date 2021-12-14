@@ -1,82 +1,55 @@
 accountList = [
     {
-        name: 'abc@gmail.com',
+        email: 'abc@gmail.com',
         pass: 'Abcabcabc',
     },
     {
-        name: 'hello@123.com',
+        email: 'hello@123.com',
         pass: 'abcabcabc',
     },
 ]
 
 function validationLogin(){
-    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
-    var usernameFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    var messageUsername = '';
+    var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var messageEmail = '';
     var messagePassword = '';
-
+    var message = '';
+   
     // validation email
-    // if(username == ""){
-    //     document.getElementById("message-username").innerHTML = "* Bạn chưa nhập email !";
-    // }
-    // else if(!username.match(usernameFormat)){
-    //     // alert("Valid email address!");
-    //     document.getElementById("message-username").innerHTML = "* Email không hợp lệ !";
-    // }
-    // else {
-    //     document.getElementById("message-username").innerHTML = "";
-    // }
-
-    // //check password
-    // if(password == ""){
-    //     document.getElementById("message-password").innerHTML = "* Bạn chưa nhập mật khẩu !";
-    // }
-    // else if(password.length < 8){
-    //     document.getElementById("message-password").innerHTML = "* Mật khẩu ít nhất có 8 ký tự !";  
-    //     return false;  
-    // }
-    // else {
-    //     document.getElementById("message-password").innerHTML = "";
-    // }
-
-    // validation email
-    if(username == ""){
-        messageUsername = "* Bạn chưa nhập email !";
+    if(email == ""){
+        messageEmail = "* Bạn chưa nhập email !";
     }
-    else if(!username.match(usernameFormat)){
-        // alert("Valid email address!");
-        messageUsername = "* Email không hợp lệ !";
+    else if(!email.match(emailFormat)){
+        messageEmail = "* Email không hợp lệ !";
     }
 
+    // validation password
     if(password == ""){
         messagePassword = "* Bạn chưa nhập mật khẩu !";
     }
     else if(password.length < 8){
-        messagePassword = "* Mật khẩu ít nhất có 8 ký tự !";  
+        messagePassword = "* Mật khẩu ít nhất có 8 ký tự !"; 
+        document.getElementById('password').value = ""; 
     }
 
-
-
-    // check pass & user
-    // var check = accountList.find(function(account){
-    //     return account.name == username && account.pass == password;
-    // });
-
-    // if(check != undefined){
-    //     contentMessage = '';
-    //     // alert("login successful !!!");
-    //     // window.location.href = "http://www.w3schools.com";
-    //     //chuyển trang
-    //     window.location.href = "home.html";
-    // }
-    // else {
-    //     // contentMessage = 'Đăng nhập không thành công !!!';
-    //     // document.getElementById('password').value = "";
-    //     alert("wrong");
-    //     // document.getElementById('message').innerHTML = contentMessage;
-    // }
-
-    document.getElementById("message-username").innerHTML = messageUsername;
+    // kiểm tra xác thực pass & email
+    if(messageEmail == "" && messagePassword == ""){
+        var check = accountList.find(function(account){
+            return account.email == email && account.pass == password;
+        });
+    
+        if(check != undefined){
+            //chuyển trang
+            window.location.href = "home.html";
+        }
+        else {
+            message = '* Email và mật khẩu không khớp !!!';
+        }
+    }
+    
+    document.getElementById("message").innerHTML = message;
+    document.getElementById("message-email").innerHTML = messageEmail;
     document.getElementById("message-password").innerHTML = messagePassword;
 }
