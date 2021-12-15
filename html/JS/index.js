@@ -1,62 +1,38 @@
-productList = [
-{
-    productName: 'Sổ tay ghi chép mục tiêu: My Day My Life',
-    sold: 'Đã bán 1000+',
-    price: '40.000đ',
-    discount: '-70%',
-    img: 'https://salt.tikicdn.com/cache/200x200/ts/product/59/55/c3/efc937e8a0244a04f670ff316846a4f7.jpg'
-},
-{
-    productName: 'Giá Đỡ Điện Thoại Và Máy Tính Bảng',
-    sold: 'Đã bán 25',
-    price: '25.000đ',
-    discount: '',
-    img: 'https://salt.tikicdn.com/cache/200x200/ts/product/f8/cb/e1/783a03a1c5c98adc3938994579893e43.jpg'
-},
-{
-    productName: 'Người nam châm (Tái bản 2019)',
-    sold: 'Đã bán 150',
-    price: '48.750đ',
-    discount: '-25%',
-    img: 'https://salt.tikicdn.com/cache/200x200/ts/product/0f/2b/f4/6ada8869a4ea8cfd557729253324c3fb.jpg'
-},
-{
-    productName: 'Sổ tay ghi chép mục tiêu: My Day My Life',
-    sold: 'Đã bán 1000+',
-    price: '40.000đ',
-    discount: '-70%',
-    img: 'https://salt.tikicdn.com/cache/200x200/ts/product/59/55/c3/efc937e8a0244a04f670ff316846a4f7.jpg'
-},
-{
-    productName: 'Sổ tay ghi chép mục tiêu: My Day My Life',
-    sold: 'Đã bán 1000+',
-    price: '40.000đ',
-    discount: '-70%',
-    img: 'https://salt.tikicdn.com/cache/200x200/ts/product/59/55/c3/efc937e8a0244a04f670ff316846a4f7.jpg'
-},
-{
-    productName: 'Sổ tay ghi chép mục tiêu: My Day My Life',
-    sold: 'Đã bán 1000+',
-    price: '40.000đ',
-    discount: '-70%',
-    img: 'https://salt.tikicdn.com/cache/200x200/ts/product/59/55/c3/efc937e8a0244a04f670ff316846a4f7.jpg'
-},
-{
-    productName: 'Sổ tay ghi chép mục tiêu: My Day My Life',
-    sold: 'Đã bán 1000+',
-    price: '40.000đ',
-    discount: '-70%',
-    img: 'https://salt.tikicdn.com/cache/200x200/ts/product/59/55/c3/efc937e8a0244a04f670ff316846a4f7.jpg'
-},
-{
-    productName: 'Sổ tay ghi chép mục tiêu: My Day My Life',
-    sold: 'Đã bán 1000+',
-    price: '40.000đ',
-    discount: '-70%',
-    img: 'https://salt.tikicdn.com/cache/200x200/ts/product/59/55/c3/efc937e8a0244a04f670ff316846a4f7.jpg'
-}
-]
+//localstorage: get username
+var userName = localStorage.getItem('name');
 
+function loginUserName(name) {
+    return '<img with="30px" height="30px" src="https://salt.tikicdn.com/ts/upload/67/de/1e/90e54b0a7a59948dd910ba50954c702e.png" alt=""></img> ' + name;
+}
+var contentLoginUserName = loginUserName(userName);
+
+document.getElementById('login-username').innerHTML = contentLoginUserName;
+
+//Lấy dữ liệu từ server JSON
+//Khai báo url fetch dữ liệu
+var url = 'http://localhost:5501/product';
+//fetch dữ liệu
+axios.get(url).then(function(response){
+    //trong respone trả về có nhiều thuộc tính như status, data, statusText
+    //thuộc tính data là nơi lưu trữ dữ liệu
+    var items = response.data;
+    // console.log('Data loading:...', items);
+
+    render(items);
+})
+
+//Hàm triển khai thêm srcipt vào HTML
+function render(productList){
+    var arrProduct = productList.map(function(item){
+        return productItems(item.img, item.productName, item.sold, item.price, item.discount);
+    })
+    
+    var content = arrProduct.join('');
+
+    document.getElementById('container-product-items').innerHTML = content;
+}
+
+// các hàm chuyển thành script HTML 
 function imgProduct(img){
     return '<div class="product-img"> <img src="' + img + '" alt=""></div>';
 }
@@ -77,28 +53,15 @@ function priceProduct(price, discount){
     return '<div class="product-price has-discount"><div class="price-discount__price">' + price + '</div><div class="price-discount__discount">' + discount + '</div></div>';
 }
 
-function convertCover(name, sold, price, discount){
+function coverProduct(name, sold, price, discount){
     return '<div class="cover"><div class="product-name">' + name + '</div>' + evaluate() + soleProduct(sold) + priceProduct(price, discount) + '</div>';
 }
 
 function productItems (img, name, sold, price, discount){
-    return '<div class="product-items" id="item">' + imgProduct(img) + convertCover(name, sold, price, discount) + '</div>'
+    return '<div class="product-items" id="item">' + imgProduct(img) + coverProduct(name, sold, price, discount) + '</div>'
 }
 
-var arrProduct = productList.map(function(item){
-    return productItems(item.img, item.productName, item.sold, item.price, item.discount);
-})
 
-var content = arrProduct.join('');
 
-document.getElementById('container-product-items').innerHTML = content;
 
-//localstorage: get username
-var userName = localStorage.getItem('name');
 
-function loginUserName(name) {
-    return '<img with="30px" height="30px" src="https://salt.tikicdn.com/ts/upload/67/de/1e/90e54b0a7a59948dd910ba50954c702e.png" alt=""></img> ' + name;
-}
-var contentLoginUserName = loginUserName(userName);
-
-document.getElementById('login-username').innerHTML = contentLoginUserName;
