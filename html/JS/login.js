@@ -1,15 +1,13 @@
-accountList = [
-    {
-        name: 'Nguyễn Văn A',
-        email: 'abc@gmail.com',
-        pass: 'Abcabcabc',
-    },
-    {
-        name: 'Trần Thị B',
-        email: 'hello@123.com',
-        pass: 'abcabcabc'
-    }
-]
+//lấy dữ liệu từ json server
+//khai báo url
+var url = 'http://localhost:5501/account';
+
+var accountList = ''; 
+
+axios.get(url).then(function(response){
+    console.log(response.data);
+    accountList = response.data;
+})
 
 //~ event "onclick = validationLogin()" in HTML
 var loginButtion = document.getElementById('login');
@@ -65,3 +63,5 @@ function validationLogin(){
     document.getElementById("message-email").innerHTML = messageEmail;
     document.getElementById("message-password").innerHTML = messagePassword;
 }
+
+//chạy server: json-server --watch data.json --port 5501

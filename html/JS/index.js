@@ -1,4 +1,4 @@
-//localstorage: get username
+//1.localstorage: get username
 var userName = localStorage.getItem('name');
 
 function loginUserName(name) {
@@ -8,16 +8,16 @@ var contentLoginUserName = loginUserName(userName);
 
 document.getElementById('login-username').innerHTML = contentLoginUserName;
 
-//Lấy dữ liệu từ server JSON
-//Khai báo url fetch dữ liệu
+
+//2.Lấy dữ liệu từ server JSON
+//Khai báo url để lấy dữ liệu
 var url = 'http://localhost:5501/product';
-//fetch dữ liệu
+//get dữ liệu
 axios.get(url).then(function(response){
     //trong respone trả về có nhiều thuộc tính như status, data, statusText
     //thuộc tính data là nơi lưu trữ dữ liệu
     var items = response.data;
     // console.log('Data loading:...', items);
-
     render(items);
 })
 
@@ -61,7 +61,4 @@ function productItems (img, name, sold, price, discount){
     return '<div class="product-items" id="item">' + imgProduct(img) + coverProduct(name, sold, price, discount) + '</div>'
 }
 
-
-
-
-
+//chạy server: json-server --watch [tên file json] --port [cổng]

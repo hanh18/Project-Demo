@@ -66,5 +66,23 @@
             "discount": "-70%",
             "img": "https://salt.tikicdn.com/cache/200x200/ts/product/59/55/c3/efc937e8a0244a04f670ff316846a4f7.jpg"
         }
+    ],
+    "account":
+    [
+        {
+            "name": "Nguyễn Văn A",
+            "email": "abc@gmail.com",
+            "pass": "Abcabcabc"
+        },
+        {
+            "name": "Trần Thị B",
+            "email": "hello@123.com",
+            "pass": "abcabcabc"
+        },
+        {
+            "name": "Nguyễn Thị C",
+            "email": "c@123.com",
+            "pass": "123123123"
+        }
     ]
 }
