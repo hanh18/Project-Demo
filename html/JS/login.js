@@ -2,7 +2,7 @@
 //khai báo url
 var url = 'http://localhost:5501/account';
 
-var accountList = ''; 
+var accountList = []; 
 
 axios.get(url).then(function(response){
     console.log(response.data);
@@ -13,7 +13,7 @@ axios.get(url).then(function(response){
 var loginButtion = document.getElementById('login');
 loginButtion.onclick = validationLogin; //gắn sự kiện onclick với 1 hàm
 
-//store data use
+//key localstorage usename
 var storageKey = 'name';
 
 function validationLogin(){
@@ -50,8 +50,9 @@ function validationLogin(){
         });
     
         if(check != undefined){
-            //chuyển trang
+            //lưu trữ tại localstorage
             localStorage.setItem(storageKey, check.name);
+            //chuyển trang
             window.location.href = "home.html";
         }
         else {
