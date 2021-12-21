@@ -28,17 +28,12 @@ module.exports.validationLogin = function(req, res){
     var pass = req.body.pass;
     var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var errs = [];
-
-    // console.log(req.body.email, req.body.pass);
     
     if(!email.match(emailFormat))
         errs.push('Email không hợp lệ !');
     
     if(pass.length < 8)
         errs.push('Mật khẩu ít nhất có 8 ký tự');
-
-    // if(email != "hello@123.com" || pass != "1")
-    //     errs.push('Sai email hoặc mật khẩu !!!');
     
     if(errs.length > 0){
         res.render('login', {
