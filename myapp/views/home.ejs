@@ -43,43 +43,13 @@
                 <div class="style__StyledSimpleSlider hcRNiQ">
                     <div class="content">
                         <span class="slider" style="transform: translateX(0px);">
-                            <a id="category-link" href="https://tiki.vn/tikingon/c44792">
-                                <div class="items-category">Thịt rau củ</div>
-                            </a>
-                            <a id="category-link" href="https://tiki.vn/bach-hoa-online/c4384">
-                                <div class="items-category">Bách hóa</div>
-                            </a>
-                            <a id="category-link" href="https://tiki.vn/bach-hoa-online/c4384">
-                                <div class="items-category">Nhà cửa</div>
-                            </a>
-                            <a id="category-link" href="https://tiki.vn/bach-hoa-online/c4384">
-                                <div class="items-category">Thiết bị số</div>
-                            </a>
-                            <a id="category-link" href="https://tiki.vn/bach-hoa-online/c4384">
-                                <div class="items-category">Điện thoại</div>
-                            </a>
-                            <a id="category-link" href="https://tiki.vn/bach-hoa-online/c4384">
-                                <div class="items-category">Mẹ & Bé</div>
-                            </a>
-                            <a id="category-link" href="https://tiki.vn/bach-hoa-online/c4384">
-                                <div class="items-category">Làm đẹp</div>
-                            </a>
-                            <a id="category-link" href="https://tiki.vn/bach-hoa-online/c4384">
-                                <div class="items-category">Gia dụng</div>
-                            </a>
-                            <a id="category-link" href="https://tiki.vn/bach-hoa-online/c4384">
-                                <div class="items-category">Thời trang nữ</div>
-                            </a>
-                            <a id="category-link" href="https://tiki.vn/bach-hoa-online/c4384">
-                                <div class="items-category">Thời trang nam</div>
-                            </a>
-                            <a id="category-link" href="https://tiki.vn/bach-hoa-online/c4384">
-                                <div class="items-category">Giày nữ</div>
-                            </a>
-                            <a id="category-link" href="https://tiki.vn/bach-hoa-online/c4384">
-                                <div class="items-category">Túi nữ</div>
-                            </a>
-
+                            <% if(categories) {%>
+                                <% categories.forEach(function(category){ %>
+                                    <a id="category-link" href="https://tiki.vn/bach-hoa-online/c4384">
+                                        <div class="items-category"><%- category.categoryName %></div>
+                                    </a>
+                                <% }); %>
+                            <% } %>
                             <span class="icon icon-next">
                                 <svg class="tikicon icon-arrow-back" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
                             </span>
@@ -106,56 +76,17 @@
                             </picture>
                         </div>
 
-                        <div class="tab false" data-view-id="home_infinity_tab_item" data-view-index="1">
-                            <picture class="webpimg-container">
-                                <source type="image/webp" srcset="https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp">
-                                <img width="48" src="https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp" class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo">
-                                <div id="tab-text">Coupon 50K</div>
-                            </picture>
-                        </div>
-
-                        <div class="tab false" data-view-id="home_infinity_tab_item" data-view-index="2">
-                            <picture class="webpimg-container">
-                                <source type="image/webp" srcset="https://salt.tikicdn.com/cache/w100/ts/tikimsp/bd/bd/c1/60a9051007edb43958a95b423679b6e2.png.webp">
-                                <img width="48" src="https://salt.tikicdn.com/cache/w100/ts/tikimsp/bd/bd/c1/60a9051007edb43958a95b423679b6e2.png.webp" class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo">
-                                <div id="tab-text">MUA 1 TẶNG 1</div>
-                            </picture>
-                        </div>
-                        <div class="tab false" data-view-id="home_infinity_tab_item" data-view-index="3">
-                            <picture class="webpimg-container">
-                                <source type="image/webp" srcset="https://salt.tikicdn.com/cache/w100/ts/personalish/41/99/9a/8898607d7fca4b79775a708c57a8152f.png.webp">
-                                <img width="48" src="https://salt.tikicdn.com/cache/w100/ts/personalish/41/99/9a/8898607d7fca4b79775a708c57a8152f.png.webp" class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo">
-                                <div id="tab-text">Deal Siêu Hot</div>
-                            </picture>
-                        </div>
-                        <div class="tab false" data-view-id="home_infinity_tab_item" data-view-index="4">
-                            <picture class="webpimg-container">
-                                <source type="image/webp" srcset="https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp">
-                                <img width="48" src="https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp" class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo">
-                                <div id="tab-text">Rẻ vô đối</div>
-                            </picture>
-                        </div>
-                        <div class="tab false" data-view-id="home_infinity_tab_item" data-view-index="5">
-                            <picture class="webpimg-container">
-                                <source type="image/webp" srcset="https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp">
-                                <img width="48" src="https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp" class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo">
-                                <div id="tab-text">Đi Chợ Siêu Sale</div>
-                            </picture>
-                        </div>
-                        <div class="tab false" data-view-id="home_infinity_tab_item" data-view-index="6">
-                            <picture class="webpimg-container">
-                                <source type="image/webp" srcset="https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp">
-                                <img width="48" src="https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp" class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo">
-                                <div id="tab-text">Hàng mới</div>
-                            </picture>
-                        </div>
-                        <div class="tab false" data-view-id="home_infinity_tab_item" data-view-index="7">
-                            <picture class="webpimg-container">
-                                <source type="image/webp" srcset="https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp">
-                                <img width="48" src="https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp" class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo">
-                                <div id="tab-text">Xu hướng thời trang</div>
-                            </picture>
-                        </div>
+                        <% if(suggestToday) {%>
+                            <% suggestToday.forEach(function(suggest){ %>
+                                <div class="tab false" data-view-id="home_infinity_tab_item" data-view-index="2">
+                                    <picture class="webpimg-container">
+                                        <source type="image/webp" srcset=<%- suggest.img %>>
+                                        <img width="48" src=<%- suggest.img %> class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo">
+                                        <div id="tab-text">MUA 1 TẶNG 1</div>
+                                    </picture>
+                                </div>
+                            <% }); %>
+                        <% } %>
                     </div>
                 </div>
             </div>
