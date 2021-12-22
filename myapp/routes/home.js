@@ -6,4 +6,6 @@ var controllerHome = require('../controller/home.controller')
 /* GET users listing. */
 router.get('/', controllerHome.showProduct);
 
+router.get('/product/:id', controllerHome.productDetail);
+
 module.exports = router;

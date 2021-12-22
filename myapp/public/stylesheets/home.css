@@ -282,3 +282,8 @@ footer .info #creator {
     /*Circle Design with CSS*/
     border-radius: 50%;
 }
+
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: none;
+}

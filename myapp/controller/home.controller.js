@@ -4,6 +4,18 @@ module.exports.showProduct = function(req, res){
     });
 };
 
+module.exports.productDetail = function(req, res){
+    var id = req.params.id;
+
+    var product = products.find((product) => {
+        return parseInt(id) === product.id;
+    });
+
+    res.render('categoryDetail', {
+        product: product
+    });
+};
+
 var products = [
     {
         "id": 1,
@@ -67,7 +79,7 @@ var products = [
         "productName": "Sổ tay ghi chép mục tiêu: My Day My Life",
         "sold": "Đã bán 1000+",
         "price": "40.000đ",
-        "discount": "-70%",
+        "discount": "",
         "img": "https://salt.tikicdn.com/cache/200x200/ts/product/59/55/c3/efc937e8a0244a04f670ff316846a4f7.jpg"
     }
 ]
