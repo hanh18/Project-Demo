@@ -16,14 +16,14 @@ var accounts = [
     }
 ]
 
-module.exports.index = function(req, res) {
+module.exports.index = (req, res) => {
     var errs = [];
     res.render('login', {
         errs: errs
     });
 };
 
-module.exports.validationLogin = function(req, res){
+module.exports.validationLogin = (req, res) => {
     var email = req.body.email;
     var pass = req.body.pass;
     var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;

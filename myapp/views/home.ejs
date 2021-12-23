@@ -14,7 +14,6 @@
 <body>
     <header>
         <nav class="navbar navbar-light" style="background-color: rgb(26, 148, 255);">
-            <!-- Navbar content -->
             <a class="navbar-brand" href="#">
                 <img id="logo" src="https://salt.tikicdn.com/ts/upload/ae/f5/15/2228f38cf84d1b8451bb49e2c4537081.png" class="d-inline-block align-top" alt="">
             </a>
@@ -78,11 +77,11 @@
 
                         <% if(suggestToday) {%>
                             <% suggestToday.forEach(function(suggest){ %>
-                                <div class="tab false" data-view-id="home_infinity_tab_item" data-view-index="2">
+                                <div class="tab false" data-view-id="home_infinity_tab_item" data-view-index=<%- suggest.id %>>
                                     <picture class="webpimg-container">
                                         <source type="image/webp" srcset=<%- suggest.img %>>
                                         <img width="48" src=<%- suggest.img %> class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo">
-                                        <div id="tab-text">MUA 1 TẶNG 1</div>
+                                        <div id="tab-text"><%- suggest.title %></div>
                                     </picture>
                                 </div>
                             <% }); %>
@@ -164,7 +163,6 @@
     <footer>
         <div class="info">
             <div id="reference-page">
-                <!-- thêm thuộc tính target="_blank" để mở tab khác -->
                 Tham khảo từ website: <a href="https://tiki.vn/"  target="_blank">Tiki</a>
             </div>
             <div id="creator">

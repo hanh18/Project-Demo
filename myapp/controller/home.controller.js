@@ -1,4 +1,4 @@
-module.exports.showProduct = function(req, res){
+module.exports.showProduct = (req, res) => {
     res.render('home', {
         products: products,
         categories: categories,
@@ -6,7 +6,8 @@ module.exports.showProduct = function(req, res){
     });
 };
 
-module.exports.productDetail = function(req, res){
+module.exports.productDetail = (req, res) => {
+    //params của router
     var id = req.params.id;
 
     var product = products.find((product) => {
@@ -137,7 +138,7 @@ var categories = [
     }
 ]
 
-let suggestToday = [
+var suggestToday = [
     {
         "id": 1,
         "title": "Coupon 50K",
