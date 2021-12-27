@@ -1,20 +1,29 @@
-var accounts = [
-    {
-        "name": "Nguyễn Văn A",
-        "email": "abc@gmail.com",
-        "pass": "Abcabcabc"
-    },
-    {
-        "name": "Trần Thị B",
-        "email": "hello@123.com",
-        "pass": "abcabcabc"
-    },
-    {
-        "name": "Nguyễn Thị C",
-        "email": "c@123.com",
-        "pass": "123123123"
-    }
-]
+// var accounts = [
+//     {
+//         "name": "Nguyễn Văn A",
+//         "email": "abc@gmail.com",
+//         "pass": "Abcabcabc"
+//     },
+//     {
+//         "name": "Trần Thị B",
+//         "email": "hello@123.com",
+//         "pass": "abcabcabc"
+//     },
+//     {
+//         "name": "Nguyễn Thị C",
+//         "email": "c@123.com",
+//         "pass": "123123123"
+//     }
+// ]
+
+const Users = require('../models/user.models');
+
+let accounts;
+
+//trả về 1 promise
+Users.find().then(function(user){
+    accounts = user;
+});
 
 module.exports.index = (req, res) => {
     var errs = [];
