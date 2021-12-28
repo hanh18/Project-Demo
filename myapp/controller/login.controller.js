@@ -1,20 +1,4 @@
-var accounts = [
-    {
-        "name": "Nguyễn Văn A",
-        "email": "abc@gmail.com",
-        "pass": "Abcabcabc"
-    },
-    {
-        "name": "Trần Thị B",
-        "email": "hello@123.com",
-        "pass": "abcabcabc"
-    },
-    {
-        "name": "Nguyễn Thị C",
-        "email": "c@123.com",
-        "pass": "123123123"
-    }
-]
+const User = require('../models/user.model');
 
 module.exports.index = (req, res) => {
     var errs = [];
@@ -43,19 +27,40 @@ module.exports.validationLogin = (req, res) => {
     }
 
     if(errs.length == 0) {
-        var check = accounts.find((account) => {
-            return account.email == email && account.pass == pass;
-        });
+        // User.find().then((accounts) => {
+        //     let check = accounts.find((account) => {
+        //         return account.email == email && account.pass == pass;
+        //     });
+        
+        //     if(check != undefined)
+        //         res.redirect('home');
+        //     else {
+        //         errs.push('Sai email hoặc mật khẩu !!!');
     
-        if(check != undefined)
-            res.redirect('home');
-        else {
-            errs.push('Sai email hoặc mật khẩu !!!');
+        //         res.render('login', {
+        //             errs: errs
+        //         });
+        //         return;
+        //     }
+        // });
 
-            res.render('login', {
-                errs: errs
-            });
-            return;
-        }
+        User.find({email: email, pass: pass}, (err, data) => {
+            if (err)
+            {
+                res.send(err);
+            }
+            console.log(data);
+
+            if(data.length > 0)
+                res.redirect('home');
+            else {
+                errs.push('Sai email hoặc mật khẩu !!!');
+    
+                res.render('login', {
+                    errs: errs
+                });
+                return;
+            }
+        })
     }
 }

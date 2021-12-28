@@ -3,6 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const mongoose = require('mongoose');
+
+require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -41,5 +44,14 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+//mongoDB
+main().catch(err => console.log(err));
+
+async function main() {
+  await mongoose.connect(process.env.MONGODB_URL);
+  // await mongoose.connect('mongodb://localhost:27017/express-demo');
+  // console.log(process.env.MONGODB_URL);
+}
 
 module.exports = app;
