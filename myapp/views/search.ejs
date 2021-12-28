@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./template/head.ejs') %>
+    <title>Search product</title>
+</head>
+<body>
+    <h1>Result search</h1>
+    
+    <div>
+        <% if(products) {%>
+            <% products.forEach(function(product){ %>
+                <div class="product-items">
+                    <a href="home/product/<%- product.id %>" class="product-items-link">
+                        <div class="product-img"> 
+                            <img src= <%- product.img %> alt="">
+                        </div>
+                    
+                        <div class="cover">
+                            <div class="product-name">
+                                <%- product.productName %>
+                            </div>
+                    
+                            <div style="display: flex; align-items: center; margin: 0 0 4px 0;">
+                                <div style="display: flex;">
+                                    <div style="position: relative;">
+                                        <div style="display: flex; align-items: center; width: 15px; white-space: nowrap; left: 0px; top: 0px;">
+                                            <img src="https://assets.dryicons.com/uploads/icon/svg/12715/7b07ac52-2bd3-41d3-bac8-766575d2e180.svg" alt="">
+                                            <img src="https://assets.dryicons.com/uploads/icon/svg/12715/7b07ac52-2bd3-41d3-bac8-766575d2e180.svg" alt="">
+                                            <img src="https://assets.dryicons.com/uploads/icon/svg/12715/7b07ac52-2bd3-41d3-bac8-766575d2e180.svg" alt="">
+                                            <img src="https://assets.dryicons.com/uploads/icon/svg/12715/7b07ac52-2bd3-41d3-bac8-766575d2e180.svg" alt="">
+                                            <img src="https://assets.dryicons.com/uploads/icon/svg/12713/0ba1c779-e08a-49d5-a61c-a35d478881c3.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="product-sold">
+                                <%- product.sold %>
+                            </div>
+                            
+                            <div class="product-price has-discount">
+                                <% if(product.discount != '') { %>
+                                    <div class="price-discount__price">
+                                        <%- product.price %>
+                                    </div>
+                                    <div class="price-discount__discount">
+                                        <%- product.discount %>
+                                    </div>
+                                <% } else{ %>  
+                                    <div class="product-price">
+                                        <div class="price-not-discount"> 
+                                            <%- product.price %>
+                                        </div>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <% }); %>
+        <% } %>
+    </div>
+
+    <%- include('./template/script.ejs')%>
+</body>
+</html>
