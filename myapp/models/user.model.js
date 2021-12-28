@@ -2,13 +2,13 @@ const mongoose = require('mongoose');
 
 //Tạo schema
 const userSchema = new mongoose.Schema({
-    "name": String,
-    "email": String,
-    "pass": String
+    name: String,
+    email: String,
+    pass: String
 });
 
 //Tạo model User
-//Tham số đầu tiên là tên collection, schema
+//model(name: string, schema?: mongoose.Schema<any, any, any>, collection?: string,
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
