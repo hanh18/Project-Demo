@@ -7,6 +7,6 @@ router.get('/', controllerHome.showProduct);
 
 router.get('/product/:id', controllerHome.productDetail);
 
-router.get('/search/', controllerHome.searchProduct);
+router.get('/search/', controllerHome.searchProductByName);
 
 module.exports = router;
