@@ -27,23 +27,6 @@ module.exports.validationLogin = (req, res) => {
     }
 
     if(errs.length == 0) {
-        // User.find().then((accounts) => {
-        //     let check = accounts.find((account) => {
-        //         return account.email == email && account.pass == pass;
-        //     });
-        
-        //     if(check != undefined)
-        //         res.redirect('home');
-        //     else {
-        //         errs.push('Sai email hoặc mật khẩu !!!');
-    
-        //         res.render('login', {
-        //             errs: errs
-        //         });
-        //         return;
-        //     }
-        // });
-
         User.find({email: email, pass: pass}, (err, data) => {
             if (err)
             {
@@ -51,8 +34,9 @@ module.exports.validationLogin = (req, res) => {
             }
             console.log(data);
 
-            if(data.length > 0)
+            if(data.length > 0){
                 res.redirect('home');
+            }
             else {
                 errs.push('Sai email hoặc mật khẩu !!!');
     
