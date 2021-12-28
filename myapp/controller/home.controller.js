@@ -1,8 +1,10 @@
 const Product = require('../models/product.model');
 const Category = require('../models/category.model');
+const SuggestToday = require('../models/suggest-today.model');
 
 let products = [];
 let categories = [];
+let suggestToday = [];
 
 Product.find((err, data) => {
     products = data;
@@ -10,7 +12,10 @@ Product.find((err, data) => {
 
 Category.find((err, data) => {
     categories = data;
-    console.log(data);
+});
+
+SuggestToday.find((err, data) => {
+    suggestToday = data;
 });
 
 module.exports.showProduct = (req, res) => {
@@ -153,40 +158,40 @@ module.exports.productDetail = (req, res) => {
 //     }
 // ]
 
-let suggestToday = [
-    {
-        "id": 1,
-        "title": "Coupon 50K",
-        "img": "https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp"
-    },
-    {
-        "id": 2,
-        "title": "MUA 1 TẶNG 1",
-        "img": "https://salt.tikicdn.com/cache/w100/ts/tikimsp/bd/bd/c1/60a9051007edb43958a95b423679b6e2.png.webp"
-    },
-    {
-        "id": 3,
-        "title": "Deal Siêu Hot",
-        "img": "https://salt.tikicdn.com/cache/w100/ts/personalish/41/99/9a/8898607d7fca4b79775a708c57a8152f.png.webp"
-    },
-    {
-        "id": 4,
-        "title": "Rẻ vô đối",
-        "img": "https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp"
-    },
-    {
-        "id": 5,
-        "title": "Đi Chợ Siêu Sale",
-        "img": "https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp"
-    },
-    {
-        "id": 6,
-        "title": "Hàng mới",
-        "img": "https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp"
-    },
-    {
-        "id": 7,
-        "title": "Xu hướng thời trang",
-        "img": "https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp"
-    }
-]
+// let suggestToday = [
+//     {
+//         "id": 1,
+//         "title": "Coupon 50K",
+//         "img": "https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp"
+//     },
+//     {
+//         "id": 2,
+//         "title": "MUA 1 TẶNG 1",
+//         "img": "https://salt.tikicdn.com/cache/w100/ts/tikimsp/bd/bd/c1/60a9051007edb43958a95b423679b6e2.png.webp"
+//     },
+//     {
+//         "id": 3,
+//         "title": "Deal Siêu Hot",
+//         "img": "https://salt.tikicdn.com/cache/w100/ts/personalish/41/99/9a/8898607d7fca4b79775a708c57a8152f.png.webp"
+//     },
+//     {
+//         "id": 4,
+//         "title": "Rẻ vô đối",
+//         "img": "https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp"
+//     },
+//     {
+//         "id": 5,
+//         "title": "Đi Chợ Siêu Sale",
+//         "img": "https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp"
+//     },
+//     {
+//         "id": 6,
+//         "title": "Hàng mới",
+//         "img": "https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp"
+//     },
+//     {
+//         "id": 7,
+//         "title": "Xu hướng thời trang",
+//         "img": "https://salt.tikicdn.com/cache/w100/ts/tikimsp/95/01/3f/c4d00ed692f9d638aefd3ce05955a0e3.png.webp"
+//     }
+// ]
