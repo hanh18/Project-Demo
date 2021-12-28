@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./template/head.ejs') %>
     <title>Product detail</title>
 </head>
 <body>
     <h1>Product detail</h1>
+    
     <div>
         <%if(product){%>
             <img src="<%-product.img%>" alt="">
-            <br>
-            Tên sản phẩm: <%-product.productName%>
-            <br>
-            Giá: <%-product.price%>
+
+            <div>Tên sản phẩm: <%-product.productName%></div>
+            <div> Đã bán: <%-product.sold%></div>
+            <div>Giá: <%-product.price%></div>
+
+            <%if(product.discount != ""){%>
+                <div>Giảm giá: <%-product.discount%></div>
+            <%}%>
         <%}%>
-            
     </div>
+
+    <%- include('./template/script.ejs')%>
 </body>
 </html>

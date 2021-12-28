@@ -30,11 +30,9 @@ module.exports.productDetail = (req, res) => {
     //params của router
     let id = req.params.id;
 
-    let product = products.find((product) => {
-        return parseInt(id) === product.id;
-    });
-
-    res.render('productDetail', {
-        product: product
+    Product.findById(id,(err, data) => {
+        res.render('productDetail', {
+            product: data
+        });
     });
 };
