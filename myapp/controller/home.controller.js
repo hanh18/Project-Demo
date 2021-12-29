@@ -37,6 +37,20 @@ module.exports.productDetail = (req, res) => {
     });
 };
 
+module.exports.searchProductByName = (req, res) => {
+    var q = req.query.q;
+
+    var matchedProducts = products.filter((product) =>{
+        return product.productName.toLowerCase().indexOf(q.toLowerCase()) != -1;
+    });
+
+    console.log(matchedProducts);
+
+    res.render('search', {
+        products: matchedProducts
+    });
+};
+
 // module.exports.searchProductByPrice = (req, res) => {
 //     var q = req.query.q;
 
@@ -56,23 +70,3 @@ module.exports.productDetail = (req, res) => {
 //         products: matchedProducts
 //     });
 // };
-
-module.exports.searchProductByName = (req, res) => {
-    var q = req.query.q;
-
-    console.log(q);
-
-    // var matchedProducts = products.filter((product) =>{
-    //     console.log(product.productName);
-    //     return product.productName.lowercase().indexOf(q.lowercase()) !== -1;
-    // });
-    var matchedProducts = products.filter((product) =>{
-        return product.productName.indexOf(q) != -1;
-    });
-
-    console.log(matchedProducts);
-
-    res.render('search', {
-        products: matchedProducts
-    });
-};

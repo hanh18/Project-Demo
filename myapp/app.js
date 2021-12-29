@@ -50,8 +50,6 @@ main().catch(err => console.log(err));
 
 async function main() {
   await mongoose.connect(process.env.MONGODB_URL);
-  // await mongoose.connect('mongodb://localhost:27017/express-demo');
-  // console.log(process.env.MONGODB_URL);
 }
 
 module.exports = app;
